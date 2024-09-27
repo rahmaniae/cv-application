@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root{
+  min-width: 100%;
+}
+h2 {
+  margin-bottom: 16px;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 36px 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.03em;
+}
+
+label {
+  font-weight: bold;
+}
+input {
+  padding: 6px 8px;
+  font-size: 1em;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 4px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+.wrapper > * {
+  box-shadow: 1px 1px 15px 0px #00000021;
+  border-radius: 12px;
+  padding: 12px 24px;
+}
+
+.btn-grp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  min-height: 75px;
+  min-width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: transform 0.25s ease-in-out;
+  flex: 1 1 auto;
+
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.1);
+  border: none;
+  background-color: #2e2e2e;
+}
+
+button[type="reset"] {
+  border: none;
+  background-color: #ffffff;
+  color: #1a1a1ac4;
+  text-decoration: underline;
+  flex: 0 0 110px;
+}
+
+button[type="reset"]:hover {
+  color: #1a1a1a;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.showExp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.showExp img {
+  margin-left: auto;
+}
+
+.dropdown:not(.visible){
+  display: none;
+}
+
+
+.dropdown:is(.visible) {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-item {
+  display: grid;
+  column-gap: 12px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "date uni buttons"
+                       "date title buttons";
+}
+
+.school-name {
+  grid-area: uni;
+}
+
+.study-title {
+  grid-area: title;
+}
+
+.study-date {
+  grid-area: date;
+} 
+
+.btns {
+  grid-area: buttons;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.practice-item {
+  display: grid;
+  column-gap: 12px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "date company buttons"
+                       "date position buttons"
+                       "date responsibilities buttons";
+}
+
+.company-name {
+  grid-area: company;
+}
+
+.practiice-position {
+  grid-area: position;
+}
+.responsibilities {
+  grid-area: responsibilities;
+}
+.practice-date {
+  grid-area: date;
+}
+
+.btns button {
+  background: none;
+  height: fit-content;
+}
+.btns button:nth-child(1) {
+  text-decoration: underline;
+  border: none;
+}
+
+.btns button:nth-child(1):focus {
+  color: #3b3b3b;
+}
+.btns button:nth-child(2) {
+  color: red;
+  border: 2px solid red;
+  border-radius: 24px;
+}
+
+.btns button:nth-child(2):hover {
+  background-color: rgb(251 219 219);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
